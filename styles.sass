@@ -1,8 +1,14 @@
 $primary-bg-color: #090e22
 $secondary-bg-color: #1d1e33
+$tertiary-bg-color: #444444
 $primary-font-color: #ffffff
 $secondary-font-color: #cccccc
+$tertiary-font-color: #dfdfdf
 $contrast-color: #f44236
+$good-alert: #12db34
+$low-alert: #dbce12
+$medium-alert: #db6212
+$high-alert: #db1912
 
 *
     margin: 0
@@ -19,7 +25,7 @@ body
     color: $primary-font-color
 
 .hide
-    display: none
+    display: none !important
 
 .container
     min-width: 400px
@@ -42,12 +48,10 @@ body
     flex-direction: column
     flex: 1
     margin-bottom: 1rem
-
     label
         font-weight: bold
         margin-bottom: .6rem
         color: $secondary-font-color
-
     input
         padding: 1rem .5rem
 
@@ -66,6 +70,68 @@ button
     cursor: pointer
     opacity: .9
     flex: 1
-
     &:hover
         opacity: 1
+
+#clear-btn
+    background-color: $tertiary-bg-color
+
+#result-container
+    text-align: center
+    display: flex
+    flex-direction: column
+    h3
+        margin-top: 1rem
+        color: $tertiary-font-color
+
+#imc-number
+    font-size: 2.4rem
+    margin-bottom: .6rem
+
+#imc-info
+    font-size: 1.4rem
+    color: $secondary-font-color
+
+#imc-table 
+    margin: 1.5rem 0
+    font-size: .8rem
+
+.table-header
+    font-weight: bold
+    color: $secondary-font-color
+
+.table-header,
+.table-data 
+    display: flex
+    justify-content: space-between
+    margin-bottom: .5rem
+    padding-bottom: .5rem
+    border-bottom: 1px solid $tertiary-bg-color
+
+.table-header h4,
+.table-data p
+    flex: 1
+
+.table-header h4:nth-child(3),
+.table-data p:nth-child(3)
+    max-width: 80px
+
+#back-btn
+    align-self: center
+
+.good
+    color: $good-alert
+
+.low
+    color: $low-alert
+
+.medium
+    color: $medium-alert
+
+.high
+    color: $high-alert
+
+@media(max-width: 450px)
+    body
+        background-color: $secondary-bg-color
+
