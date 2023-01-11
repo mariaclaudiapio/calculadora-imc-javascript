@@ -22,7 +22,7 @@ Calculadora de IMC programada em JavaScript.
 
 <h2 align="center">🛠️ Deploy do Site </h2> 
 
-* *Você pode conferir o deploy do site no link:* 
+* *Você pode conferir o deploy do site no link:* [calculadora-imc-javascript-pi.vercel.app](https://calculadora-imc-javascript-pi.vercel.app/)
 
   
 
