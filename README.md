@@ -17,12 +17,12 @@ Calculadora de IMC programada em JavaScript.
 <h2 align="center">👩🏽‍💻 Tecnologias Utilizadas</h2>   
 
 * HTML;
-* CSS;
+* Sass;
 * JavaScript.
 
 <h2 align="center">🛠️ Deploy do Site </h2> 
 
-* *Lembrando também que você pode conferir o deploy do site no link:* 
+* *Você pode conferir o deploy do site no link:* 
 
   
 
