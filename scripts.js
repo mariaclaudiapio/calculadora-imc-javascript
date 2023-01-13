@@ -5,14 +5,14 @@ const data = [
         max: 18.4,
         classification: "Menor que 18,5",
         info: "Magreza",
-        obesity: 0,
+        obesity: "0",
     },
     {
         min: 18.5,
         max: 24.9,
         classification: "Entre 18,5 e 24,9",
         info: "Normal",
-        obesity: 0,
+        obesity: "0",
     },
     {
         min: 25,
@@ -79,15 +79,16 @@ function cleanInputs() {
     imcInfo.classList = ''
 }
 
-// function validDigits(text) {
-//     return text.replace(/[^0-9,]/g, '')
-// }
-
-function calcImc(weight, height) {
-    const imc = (weight / (height * height)).toFixed(1)
-
-    return imc
+function validDigits(text) {
+    return text.replace(/[^0-9,]/g, '')
 }
+
+function calcImc(height, weight) {
+    const imc = (weight / (height * height)).toFixed(1)
+    return imc
+
+}
+
 
 function showOrHideResults() {
     calcContainer.classList.toggle('hide')
@@ -95,15 +96,15 @@ function showOrHideResults() {
 }
 
 // Inicialização
-createTable(data)
+createTable(data);
 
 // Eventos
-// [heightInput, weightInput].forEach((el) => {
-//     el.addEventListener('input', (e) => {
-//         const updatedValue = validDigits(e.target.value)
-//         e.target.value = updatedValue
-//     })
-// })
+[heightInput, weightInput].forEach((el) => {
+    el.addEventListener('input', (e) => {
+        const updatedValue = validDigits(e.target.value)
+        e.target.value = updatedValue
+    })
+})
 
 calcBtn.addEventListener('click', (e) => {
     e.preventDefault()
