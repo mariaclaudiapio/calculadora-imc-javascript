@@ -86,7 +86,6 @@ function validDigits(text) {
 function calcImc(height, weight) {
     const imc = (weight / (height * height)).toFixed(1)
     return imc
-
 }
 
 
@@ -114,7 +113,7 @@ calcBtn.addEventListener('click', (e) => {
 
     if(!weight || !height) return
 
-    const imc = calcImc(weight, height)
+    const imc = calcImc(height, weight)
     
     let info
 
